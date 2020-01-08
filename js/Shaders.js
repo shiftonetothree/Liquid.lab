@@ -1,6 +1,6 @@
 var CloudBasic = {
     uniforms:{
-        scale :  { type: 'f', value: 800 },
+        scale :  { type: 'f', value: 160 },
         map: { type: 't', value: null },
         usemap: {type: 'i', value: 0},
     },
@@ -111,11 +111,13 @@ var BlobShader = {
         reflectionFactor: { type:'f', value: 0.6 },
         refractionRatio: { type:'f', value: 0.98 },
 
-        rimPower:    { type:'f', value: 0.5 },
+        /** 关闭边缘高亮 */
+        rimPower:    { type:'f', value: 0.0 },
         rimEdge:     { type:'f', value: 0.9 },
         rimColor:    { type:'c', value: new THREE.Color(0xCCCCCC) },
 
-        useLight :   { type:'i', value: 1 },
+        /** 关闭环境光 */
+        useLight :   { type:'i', value: 0 },
         lightColor:  { type:'c', value: new THREE.Color(0x404040) },
         lightOrbit:  { type:'v3', value: new THREE.Vector3(-45,45,60)},
         lightAnim :  { type:'v2', value: new THREE.Vector2(0.0,0.0) },

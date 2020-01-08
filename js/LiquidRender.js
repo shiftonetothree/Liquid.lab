@@ -350,8 +350,8 @@ function ExtraParticle(){
     //var particleMaterial = new THREE.ShaderMaterial( CloudGausMIN );
     //var gauss = new GaussTexture(64,1,0.067);
     //var gauss = new GaussTexture(16,1,0.067);
-    //particleMaterial.uniforms.map.value = THREE.ImageUtils.loadTexture( 'textures/point.png');
-    //particleMaterial.uniforms.usemap.value = true;
+    particleMaterial.uniforms.map.value = THREE.ImageUtils.loadTexture( 'textures/point.png');
+    particleMaterial.uniforms.usemap.value = true;
 
     particlesCloud = new THREE.Points( this.geometry, particleMaterial );
     //particlesCloud.position.set(0,0,0.01);
